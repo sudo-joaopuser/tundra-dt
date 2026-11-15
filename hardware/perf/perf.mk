@@ -27,7 +27,6 @@ PRODUCT_PACKAGES += \
     libq-perflog \
     libqti-perfd \
     libqti-perfd-client \
-    libqti-perfd-client-perf2 \
     libqti-util \
     libqti-utils \
     libsplh \
