@@ -68,22 +68,22 @@ vendor/firmware/aw882xx_pid_2113_acf.bin
 vendor/firmware/aw_skt.bin
 
 # Audio libraries
-vendor/lib/libacdb-fts.so
-vendor/lib/libacdbloader.so
-vendor/lib/libacdbrtac.so
-vendor/lib/libadiertac.so
-vendor/lib/libadm.so
-vendor/lib/libaudcal.so
-vendor/lib/libqtigef.so
+# From TheMuppets/proprietary_vendor_motorola_tundra @426ad6d4 (tundra stock U1SJS34.2-92-10-9)
+vendor/lib64/libacdbloader.so|3de4e2563925ff446502461fd03be6b7dc69db51
+# From TheMuppets/proprietary_vendor_motorola_sm7325-common @16423f57 (dubai U1RDS34.80-40-5-6)
+vendor/lib64/libacdb-fts.so|869bb15ee02680d556f95a12f162c516845404b5
+vendor/lib64/libacdbrtac.so|df425ec5990721313f4c36934e35a7c505b73db1
+vendor/lib64/libadiertac.so|6fd42a41931b87c7498db091941399a75beb59c2
+vendor/lib64/libaudcal.so|786a83c651ca993df9c37486c0e9f4c0da50235e
+vendor/lib64/libqtigef.so|15db152b3b3277886640eaa79cd9087bda0d0114
 
 # Audio
-vendor/lib/libaudio_log_utils.so
 vendor/lib64/libaudio_log_utils.so
 
 # Audio - soundfx
-vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libmmieffectswrapper.so
-vendor/lib/soundfx/libshoebox.so
+# From TheMuppets/proprietary_vendor_motorola_sm7325-common @16423f57 (dubai U1RDS34.80-40-5-6)
+vendor/lib64/soundfx/libasphere.so|743ec4018de6a0bd91adea109eb6f7514a9e576d
+vendor/lib64/soundfx/libshoebox.so|6154fb259131deacd9e233c04d15ed16d3a381b8
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
@@ -99,10 +99,11 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Bluetooth (A2DP)
-vendor/lib/btaudio_offload_if.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
-vendor/lib/libbluetooth_audio_session_qti.so
-vendor/lib/libbluetooth_audio_session_qti_2_1.so
+# From TheMuppets/proprietary_vendor_motorola_sm7325-common @16423f57 (dubai U1RDS34.80-40-5-6)
+vendor/lib64/btaudio_offload_if.so|0e92ce178392681bd27e8c695be3e633507844de
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so|0af35e41fb30180bae6ef02a78e6c28d826aed71
+vendor/lib64/libbluetooth_audio_session_qti.so|ae883682f5bf2806b8e0566ee163d7dd0db51064
+vendor/lib64/libbluetooth_audio_session_qti_2_1.so|3400f555785630ad5a748adee5ed2380b48164c0
 
 # CAcert
 vendor/app/CACertService/CACertService.apk
@@ -119,7 +120,6 @@ vendor/etc/camera/dual_golden_wide.bin
 vendor/etc/camera/mot_engine_config.bin
 vendor/etc/camera/vidhance_calibration
 vendor/etc/camera/vidhance_calibration_2rd
-vendor/lib/libcamxexternalformatutils.so
 vendor/lib64/camera/com.mot.eeprom.mot_gt24p128e_ov50a_eeprom.so
 vendor/lib64/camera/com.mot.eeprom.mot_gt24p64e_hi1336_eeprom.so
 vendor/lib64/camera/com.mot.eeprom.mot_gt24p64e_s5kgd2_eeprom.so
@@ -352,7 +352,6 @@ product/priv-app/MotCamera4/MotCamera4.apk:system_ext/priv-app/MotCamera4/MotCam
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
-vendor/lib/libcdsprpc.so
 vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
@@ -367,7 +366,6 @@ vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink
 vendor/bin/cnd
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 vendor/etc/init/cnd.rc
-vendor/lib/libxml.so
 vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
@@ -435,10 +433,6 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 # Computer Vision (FastCV)
 vendor/etc/cvp/v2.0/facedetection/model1.dat
 vendor/etc/cvp/v2.1/facedetection/model2.dat
-vendor/lib/libcvp2_1.so
-vendor/lib/libcvp_common.so
-vendor/lib/libfastcvdsp_stub.so
-vendor/lib/libfastcvopt.so
 vendor/lib64/libcvp2_1.so
 vendor/lib64/libcvp_common.so
 vendor/lib64/libcvpcpuRev_skel.so
@@ -561,7 +555,6 @@ vendor/lib64/libwvhidl.so
 vendor/bin/dspservice
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
-vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
 # Fingerprint
@@ -614,27 +607,6 @@ vendor/gpu/kbc/sequence_manifest.bin|cc050a8058904871b3cfabec74521d42f0a61a1f
 vendor/gpu/kbc/unified_kbcs_32.bin|503228f87adc71131aa8134659b00dffe073e973
 vendor/gpu/kbc/unified_kbcs_64.bin|d63c26959dc02b2efc251953e99dc6e7c32e7f6e
 vendor/gpu/kbc/unified_ksqs.bin|8f77dc004796d58acb959e78f4994c5d6b90baef
-vendor/lib/egl/eglSubDriverAndroid.so|c4133b15d0a36f0775418724e09ce76681baa16d
-vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so|0b6e09ba4dd6aaf221444fcc9adc40d2e597364a
-vendor/lib/egl/libGLESv1_CM_adreno.so|5ab7196d4c8ae861ff484cb6b1f4b5ac3c9738b4
-vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so|f911273ad25fe2d0ee5a1336fcb603a04a06e1a1
-vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so|994551fb9b829caf80bb7a8f84b4b89cb3104ed9
-vendor/lib/egl/libq3dtools_esx.so|d6a9c80dab61e9bddf120b01753166c3ef5d23d7
-vendor/lib/hw/vulkan.adreno.so|267e7821c594c0db7dde56b7ef53ceb5980716e1
-vendor/lib/libC2D2.so|1c89e545a5dabc94d27db32031594a792d91d6fd
-vendor/lib/libCB.so|22585f517683171c74dbc58e561611c796f061b3
-vendor/lib/libOpenCL.so|d5642e23207996dbbc13273927127ecf04fced53
-vendor/lib/libVkLayer_q3dtools.so|f8391c9500a3598c41ecb83b8e17642abd250cb8
-vendor/lib/libadreno_app_profiles.so|3f37b410477cec277a803a722dfed59484d4f1bc
-vendor/lib/libadreno_utils.so|668fb9acb7ecab7452bfc665250f851a25b6521d
-vendor/lib/libc2d30_bltlib.so|b98194a7b600b8a23d5e21edf14f3ee0b82f77d5
-vendor/lib/libgpudataproducer.so|0ad0bdce5b4c36e10a10503b13b903d5eeeb7c7f
-vendor/lib/libgsl.so|bf7ceef8536752db323775d5a6a093b3f209e8f2
-vendor/lib/libkcl.so|4de6a2a00aed99c2f180ae5cf3ec03a96b3be2d7
-vendor/lib/libkernelmanager.so|09e05782cae3b8c5910d069c9d79eb4e58f2801d
-vendor/lib/libllvm-glnext.so|60c4a1792b96932ca027060a939a7ef155e52e01
-vendor/lib/libllvm-qcom.so|01afd4f1a88d6fcd4e2123aa2e13add8ad4339fc
-vendor/lib/vendor.qti.qspmhal@1.0.so|736226264356bb89b73d81922f73b7f2b83540bc
 vendor/lib64/egl/eglSubDriverAndroid.so|2692fd8aac6a9fd49faace2213b2631f7595afad
 vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so|74766c6648c64e6af2944fe1a983f1e70f548cbe
 vendor/lib64/egl/libGLESv1_CM_adreno.so|b9e14710b9c2be024e1fdf77d60266423e484047
@@ -645,7 +617,6 @@ vendor/lib64/hw/vulkan.adreno.so|ce27b014f47e93fa55096f5d50d686fbe12c3e8f
 vendor/lib64/libC2D2.so|0b4aa67ef7e86df61a1bfd7dfd4680e0f0d7104c
 vendor/lib64/libCB.so|c458543bc706d0dcfac756a6e86e2654592f8b16
 vendor/lib64/libOpenCL.so|76d6d5f9e89d896665fdd06cbede3e21c92c8068
-vendor/lib64/libVkLayer_q3dtools.so|4cb0662d41c0fb39c6c7d5daa7db2e73d3b5f457
 vendor/lib64/libadreno_app_profiles.so|19fdab3bda70acad8e28d82cb1a3ed49c74fcf02
 vendor/lib64/libadreno_utils.so|240872ec23febc6ca7b254dbb38b7218b86f6dd5
 vendor/lib64/libc2d30_bltlib.so|e330210916d482cdbf6fe942145a664679fa9c88
@@ -655,7 +626,6 @@ vendor/lib64/libkcl.so|505c6488d7c2c34ac6bcc578e6e90098553e5f4f
 vendor/lib64/libkernelmanager.so|6e34cfed1b61ef27ac3740cf477e1ed836695513
 vendor/lib64/libllvm-glnext.so|864e52831a8c18e10da5674288c371598f4d4173
 vendor/lib64/libllvm-qcom.so|f6af31fb74163e3341918c861bece94b8feecc08
-vendor/lib64/vendor.qti.qspmhal@1.0.so|b24925548b969a7745955bbd48069207aa5889fc
 
 # Graphics firmware
 vendor/firmware/a615_zap.b00
@@ -757,40 +727,40 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 
 # Listen
-vendor/lib/libcapiv2svacnn.so
-vendor/lib/libcapiv2svarnn.so
-vendor/lib/libcapiv2vop.so
-vendor/lib/libgcs-calwrapper.so
-vendor/lib/libgcs-ipc.so
-vendor/lib/libgcs-osal.so
-vendor/lib/libgcs.so
-vendor/lib/liblistensoundmodel2.so
-vendor/lib/libmulawdec.so
+# From TheMuppets/proprietary_vendor_motorola_sm7325-common @16423f57 (dubai U1RDS34.80-40-5-6)
+vendor/lib64/libcapiv2svacnn.so|75e7191bb291f18f909e19092052a66f942b3fba
+vendor/lib64/libcapiv2svarnn.so|c2030da244d21e6fa52102699bfc48acdaf2a41a
+vendor/lib64/libcapiv2vop.so|9775a816f5c05b1a09e6bdbcc57fde765ee63e7c
+vendor/lib64/libgcs-calwrapper.so|640296b642c9f32e58035214dccf0b06ee3e5cfe
+vendor/lib64/libgcs-ipc.so|05781bf38fca2386cd6d16d0075cbd23ea421e25
+vendor/lib64/libgcs-osal.so|3bb39d8fd240b81b42f8a26b707021ffffb0b3c9
+vendor/lib64/libgcs.so|b11be1a4cee5cb62ec0e9a7c8feccb6c5c330b43
+vendor/lib64/liblistensoundmodel2.so|6c66a3fdb2d6ddbceb274cf5b77adaaf9099fb60
+vendor/lib64/libmulawdec.so|fcfd2175fbcf802d5282d0e330c731a7dd3cd3f5
 
 # Media
-system_ext/lib/libmmosal.so
-system_ext/lib/libmmparser_lite.so
 system_ext/lib64/libmmosal.so
 system_ext/lib64/libmmparser_lite.so
-vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/init.qti.media.sh
 vendor/etc/init/init.qti.media.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/media/video_system_specs.json
 vendor/etc/media_lahaina/video_system_specs.json
-vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
-vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
 vendor/etc/video_system_specs.json
-vendor/lib/libmmosal.so;MODULE_SUFFIX=_vendor
-vendor/lib/libqc2vppfilter.so
-vendor/lib/libqcodec2_base.so
-vendor/lib/libqcodec2_basecodec.so
-vendor/lib/libqcodec2_core.so
-vendor/lib/libqcodec2_hooks.so
-vendor/lib/libqcodec2_platform.so
-vendor/lib/libqcodec2_utils.so
-vendor/lib/libqcodec2_v4l2codec.so
 vendor/lib64/libmmosal.so;MODULE_SUFFIX=_vendor
+
+# From TheMuppets/proprietary_vendor_nothing_spacewar @dfb1065b
+vendor/lib64/libqc2vppfilter.so|94ade420910d7cc77d10d6b7a652b840780fd09b
+vendor/lib64/libqcodec2_base.so|1501bb8c174c102fef35233254bc1a4fadb414b8
+vendor/lib64/libqcodec2_basecodec.so|19689c20e91ac0ff502f4a308eed1f8ca4921be2
+vendor/lib64/libqcodec2_core.so|57bfcede78e1b159e2448c9c03099c34bda4f98e
+vendor/lib64/libqcodec2_hooks.so|4751cfa1d1fceb15717ae758647eacfa1bdea586
+vendor/lib64/libqcodec2_platform.so|aef712ee185840f3e000abc392b25821b0532fcd
+vendor/lib64/libqcodec2_utils.so|171595a70b902ac178a44269b44dba71287f75c6
+vendor/lib64/libqcodec2_v4l2codec.so|b1467e7ea7de22977a4a1bbfdfd666e774215007
+
+# From TheMuppets/proprietary_vendor_xiaomi_sm8450-common @e0a81d91
+vendor/bin/hw/vendor.qti.media.c2@1.0-service|a3a103902ba4d0d2a41f7e6d61798cf846cbcc0d
 
 # Media configs
 vendor/etc/media_codecs_performance_lahaina.xml
@@ -840,23 +810,6 @@ vendor/bin/qmipriod
 vendor/etc/init/qmipriod.rc
 vendor/etc/sec_config
 vendor/etc/seccomp_policy/qti-systemd.policy
-vendor/lib/libdiag.so
-vendor/lib/libdsi_netctrl.so
-vendor/lib/libdsutils.so
-vendor/lib/libidl.so
-vendor/lib/libqcci_legacy.so
-vendor/lib/libqcmaputils.so
-vendor/lib/libqdi.so
-vendor/lib/libqdp.so
-vendor/lib/libqmi.so
-vendor/lib/libqmi_cci.so
-vendor/lib/libqmi_client_helper.so
-vendor/lib/libqmi_client_qmux.so
-vendor/lib/libqmi_common_so.so
-vendor/lib/libqmi_csi.so
-vendor/lib/libqmi_encdec.so
-vendor/lib/libqmi_legacy.so
-vendor/lib/libqmiservices.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
@@ -965,9 +918,6 @@ vendor/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
 vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
-vendor/lib/libconfigdb.so
-vendor/lib/libmdmdetect.so
-vendor/lib/libnetmgr.so
 vendor/lib64/deviceInfoServiceModuleNr.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/liblog_vendor.so
@@ -1109,12 +1059,6 @@ vendor/etc/sensors/config/sns_wrist_pedo.json
 vendor/etc/sensors/sns_reg_config
 
 # Snapdragon Computer Vision Engine
-vendor/lib/libscveCommon.so
-vendor/lib/libscveCommon_stub.so
-vendor/lib/libscveObjectSegmentation.so
-vendor/lib/libscveObjectSegmentation_stub.so
-vendor/lib/libscveObjectTracker.so
-vendor/lib/libscveObjectTracker_stub.so
 vendor/lib64/libscveCommon.so
 vendor/lib64/libscveCommon_stub.so
 vendor/lib64/libscveObjectSegmentation.so
@@ -1141,7 +1085,6 @@ vendor/etc/thermal-engine-tundra.conf
 # Thermal engine
 vendor/bin/thermal-engine
 vendor/etc/init/init_thermal-engine.rc
-vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 
 # Time services
@@ -1166,16 +1109,6 @@ vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/init/qconfig.rc
 vendor/etc/init/vppservice.rc
-vendor/lib/libqconfigclient.so
-vendor/lib/libvppclient.so
-vendor/lib/libvpphcp.so
-vendor/lib/libvpphvx.so
-vendor/lib/libvpplibrary.so
-vendor/lib/vendor.qti.hardware.qconfig@1.0.so
-vendor/lib/vendor.qti.hardware.vpp@1.1.so
-vendor/lib/vendor.qti.hardware.vpp@1.2.so
-vendor/lib/vendor.qti.hardware.vpp@1.3.so
-vendor/lib/vendor.qti.hardware.vpp@2.0.so
 vendor/lib64/libqconfigclient.so
 vendor/lib64/libvppclient.so
 vendor/lib64/libvpphcp.so
